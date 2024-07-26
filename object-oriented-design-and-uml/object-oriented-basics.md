@@ -20,23 +20,21 @@ class ShoppingCart(object):
       self.items = {}
 
     def add_item(self, item_name, quantity, price):
-        self.total += (quantity * price)
+        self.total += quantity * price
         self.items.update({item_name : quantity})
 
 
     def remove_item(self, item_name, quantity, price):
-        self.total -= (quantity * price)
-        if quantity > self.items[item_name]:
-          del self.items[item_name]
-        self.items[item_name] -= quantity
-
+        if quantity >= self.items[item_name]:
+            self.total -= self.items[item_name] * price
+            del self.items[item_name]
+        else:
+            self.items[item_name] -= quantity 
+            self.total -= quantity * price
 
     def checkout(self, cash_paid):
-        balance = 0
-        if cash_paid < self.total:
-          return "You paid {} but cart amount is {}".format(cash_paid, self.total)
-        balance = cash_paid - self.total
-        return "Exchange amount: {}".format(balance)
+        if cash_paid < self.total: return (f"You paid {cash_paid} but cart amount is {self.total - cash_paid}") 
+        return (f"Exchange amount: {cash_paid - self.total}")
 ```
 
 **Object and it's Uses Code Snippet:**
@@ -52,7 +50,7 @@ cart.remove_item('B', 1, 20)
 cart_res = cart.checkout(600)
 
 print('Total cart amount:', cart.total)
-print('Cart items:', cart.items)
+print('Cart items:', cart.items())
 
 print(cart_res)
 ```
