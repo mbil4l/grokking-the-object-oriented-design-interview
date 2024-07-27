@@ -2,11 +2,11 @@
 
 Use case diagrams describe a set of actions (called use cases) that a system should or can perform in collaboration with one or more external users of the system (called actors). Each use case should provide some observable and valuable result to the actors.
 
-1. Use Case Diagrams describe the **high-level functional behavior** of the system.
-2. It answers what system does from the **user point of view**.
-3. Use case answers **‘What will the system do?’** and at the same time tells us **‘What will the system NOT do?’**.
+1. Use Case Diagrams describe the <span style="font-size:2em;">**high-level functional behavior**</span> of the system.
+2. It answers what system does from the <span style="font-size:2em;">**user point of view**</span>.
+3. Use case answers <span style="font-size:2em;">**‘What will the system do?’**</span> and at the same time tells us <span style="font-size:2em;">**‘What will the system NOT do?’**</span>
 
-A use case illustrates a unit of functionality provided by the system. The primary purpose of the use case diagram is to help development teams **visualize the functional requirements of a system**, including the relationship of “actors” to the essential processes, as well as the relationships among different use cases.
+A use case illustrates a unit of functionality provided by the system. The primary purpose of the use case diagram is to help development teams <span style="font-size:2em;"> **visualize the functional requirements of a system**</span>, including the relationship of “actors” to the essential processes, as well as the relationships among different use cases.
 
 To illustrate a use case on a use case diagram, we draw an oval in the middle of the diagram and put the name of the use case in the center of the oval. To show an actor (indicating a system user) on a use-case diagram, we draw a stick figure to the left or right of the diagram.
 
